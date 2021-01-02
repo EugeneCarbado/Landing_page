@@ -202,7 +202,7 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     padding: 150px 100px 0 100px;
 }
 
@@ -216,6 +216,11 @@
     line-height: 1.5;
     color: #555;
     margin: 15px;
+    transition: 0.5s;
+}
+
+.pricing-plan:hover {
+    transform: scale(1.1);
 }
 
 .pricing-plan-highlighted {
@@ -247,6 +252,8 @@
 .pricing-plan-title {
     font-size: 1.5em;
     font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
 }
 
 .pricing-plan-summary {
@@ -256,10 +263,6 @@
 
 .pricing-plan-description {
     padding: 25px;
-}
-
-.pricing-plan-list {
-
 }
 
 .pricing-plan-feature {
@@ -276,7 +279,7 @@
 
 .pricing-plan-feature::before{
     content: "\2714";
-    color: #E0E1F0;
+    color: #707070;
     position: absolute;
     left: 0;
 }
@@ -300,7 +303,7 @@
     text-transform: uppercase;
     letter-spacing: 0.02em;
     font-weight: bold;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .pricing-plan-button:hover {
