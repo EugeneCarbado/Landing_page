@@ -18,36 +18,37 @@
     <!-- header section -->
     <header class="main-header" id="nav">
         <a href="#home"><img src="../images/logo.png" href="#home" class="logo"></a>
-        <ul class="nav-list">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About us</a></li>
-            <li><a href="#plans">Plans</a></li>
-            <li><a href="#Help">Help</a></li>
-        </ul>
+        <div class="nav-box">
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#plans">Plans</a></li>
+                <li><a href="#help">Help</a></li>
+            </ul>
 
-        <div class="btn">
-            <button class="sign-in-btn">Sign in</button>
-            <button class="sign-up-btn">Get the App</button>
+            <div class="btn">
+                <button class="sign-in-btn">Sign in</button>
+                <button class="sign-up-btn">Get the App</button>
+            </div>
         </div>
     </header>
     <!-- end of header section -->
 
     <!-- home section -->
     <section class="home-section" id="home">
-        <div class="grid-container">
+        <div class="container">
             <div class="heading-landing-text">
                 <div class="main-heading">
                     <h1 class="heading-text">Make your money go further</h1>
                 </div>
-                <div class="sub-heading">
-                    <p class="sub-heading-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, unde consequuntur! Quod
-                        temporibus labore dignissimos, quae possimus cupiditate maiores aut?
-                    </p>
-                </div>
+                <br>
+                <p class="sub-heading">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, unde consequuntur! Quod
+                    temporibus labore dignissimos, quae possimus cupiditate maiores aut?
+                </p>
             </div>
             <div class="main-img">
-                <img src="../images/img2.png" alt="">
+                <img src="../images/img2.png" alt="" class="home-img">
             </div>
         </div>
         </div>
@@ -57,18 +58,109 @@
 
     <!-- about section -->
     <section class="about-section" id="about">
-
+        <div class="about-container">
+            <img src="../images/img3.jpg" alt="" class="about-img">
+            <div class="about-text">
+                <h2 class="about-text-header">
+                    Our app gives you more
+                </h2>
+                <br>
+                <p class="about-text-sub">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam nihil alias dolorum nam illum
+                    voluptatibus aliquid provident nulla, veritatis dignissimos?
+                </p>
+            </div>
+        </div>
+        <div class="stats">
+            <div class="personal-stat">
+                <p class="stat-number">8M+</p>
+                <p class="stat-text">Personal customers</p>
+            </div>
+            <div class="business-stat">
+                <p class="stat-number">200K</p>
+                <p class="stat-text">Business customers</p>
+            </div>
+            <div class="country-stat">
+                <p class="stat-number">35+</p>
+                <p class="stat-text">Countries supported</p>
+            </div>
+            <div class="app-stat">
+                <p class="stat-number">30+</p>
+                <p class="stat-text">In-app currencies</p>
+            </div>
+        </div>
     </section>
     <!-- end of about section -->
 
     <!-- plans section -->
-    <section class="plans-section" id="plans">
+    <section class="plans-section">
+        <div class="pricing-plan-container">
+            <div class="pricing-plan" id="plans">
+                <div class="pricing-plan-header">
+                    <h1 class="pricing-plan-title">Standard</h1>
+                    <h2 class="pricing-plan-summary">For those getting started</h2>
+                </div>
+                <div class="pricing-plan-description">
+                    <ul class="pricing-plan-list">
+                        <li class="pricing-plan-feature">Lorem, ipsum dolor.</li>
+                        <li class="pricing-plan-feature">Lorem ipsum dolor sit.</li>
+                        <li class="pricing-plan-feature">Lorem ipsum dolor sit amet consectetur.</li>
+                    </ul>
+                </div>
+                <div class="pricing-plan-actions">
+                    <p class="pricing-plan-cost">£0</p>
+                    <p class="pricing-plan-text">per month</p>
+                    <a href="./" class="pricing-plan-button">Get Standard</a>
+                    <p class="pricing-plan-text">Account withdrawl limit £400 a Month</p>
+                </div>
+            </div>
 
+            <div class="pricing-plan pricing-plan--highlighted" id="plans">
+                <div class="pricing-plan-special_text">Most popular</div>
+                <div class="pricing-plan-header">
+                    <h1 class="pricing-plan-title">Premium</h1>
+                    <h2 class="pricing-plan-summary">Our Entry level account</h2>
+                </div>
+                <div class="pricing-plan-description">
+                    <ul class="pricing-plan-list">
+                        <li class="pricing-plan-feature">Lorem, ipsum dolor.</li>
+                        <li class="pricing-plan-feature">Lorem ipsum dolor sit.</li>
+                        <li class="pricing-plan-feature">Lorem ipsum dolor sit amet consectetur.</li>
+                    </ul>
+                </div>
+                <div class="pricing-plan-actions">
+                    <p class="pricing-plan-cost">£6.99</p>
+                    <p class="pricing-plan-text">per month</p>
+                    <a href="./" class="pricing-plan-button">Get Premium</a>
+                    <p class="pricing-plan-text">Account withdrawl limit £1000 a Month</p>
+                </div>
+            </div>
+
+            <div class="pricing-plan" id="plans">
+                <div class="pricing-plan-header">
+                    <h1 class="pricing-plan-title">Pro Account</h1>
+                    <h2 class="pricing-plan-summary">For the serious user</h2>
+                </div>
+                <div class="pricing-plan-description">
+                    <ul class="pricing-plan-list">
+                        <li class="pricing-plan-feature">Lorem, ipsum dolor.</li>
+                        <li class="pricing-plan-feature">Lorem ipsum dolor sit.</li>
+                        <li class="pricing-plan-feature">Lorem ipsum dolor sit amet consectetur.</li>
+                    </ul>
+                </div>
+                <div class="pricing-plan-actions">
+                    <p class="pricing-plan-cost">£12.99</p>
+                    <p class="pricing-plan-text">per month</p>
+                    <a href="./" class="pricing-plan-button">Get Pro Account</a>
+                    <p class="pricing-plan-text">Account withdrawl limit £1500 a Month</p>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- end of plans section -->
 
     <!-- help section -->
-    <section class="help-section">
+    <section class="help-section" id="help">
 
     </section>
     <!-- end of help section -->
