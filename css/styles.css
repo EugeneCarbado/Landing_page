@@ -219,9 +219,9 @@
     transition: 0.5s;
 }
 
-/* .pricing-plan:hover {
+.pricing-plan:hover {
     transform: scale(1.1);
-} */
+}
 
 .pricing-plan-highlighted {
     box-shadow: 0 0 15px rgba(0,0,0, 0.4);
