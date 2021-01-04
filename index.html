@@ -19,22 +19,26 @@
 
 <body>
     <!-- header section -->
-    <header class="main-header" id="nav">
-        <a href="#home"><img src="../images/logo.png" href="#home" class="logo"></a>
-        <div class="nav-box">
-            <ul class="nav-list">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About us</a></li>
-                <li><a href="#plans">Plans</a></li>
-                <li><a href="#help">Help</a></li>
-            </ul>
+    <header class="header-section" id="nav">
+        <div class="logo">
+            <a href="#">
+                <img src="./images/logo.png" alt="">
+            </a>
+        </div>
+        <div class="navigation">
 
-            <div class="btn">
-                <button class="sign-in-btn">Sign in</button>
-                <button class="sign-up-btn">Get the App</button>
-            </div>
+            <input type="checkbox" class="toggle-menu">
+            <div class="hamburger"></div>
+
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Abouts Us</a></li>
+                <li><a href="#">Plans</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
         </div>
     </header>
+
     <!-- end of header section -->
 
     <!-- home section -->
@@ -43,16 +47,13 @@
             <div class="heading-landing-text">
                 <div class="main-heading">
                     <h1 class="heading-text">Make your money go further</h1>
+                    <p class="sub-heading">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, unde consequuntur! Quod
+                        temporibus labore dignissimos, quae possimus cupiditate maiores aut?
+                    </p>
                 </div>
-                <br>
-                <p class="sub-heading">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, unde consequuntur! Quod
-                    temporibus labore dignissimos, quae possimus cupiditate maiores aut?
-                </p>
             </div>
-            <div class="main-img">
-                <img src="../images/img2.png" alt="" class="home-img">
-            </div>
+            <img src="../images/img2.png" alt="" class="main-img">
         </div>
         </div>
         <!--  -->
@@ -165,6 +166,7 @@
     <!-- help section -->
     <section class="help-section" id="help">
         <div class="help-container">
+            <h2 class="help-qestion">How can we help?</h2>
             <div class="faq-box">
                 <p class="faq-heading">FAQs</p>
                 <div class="faqs">

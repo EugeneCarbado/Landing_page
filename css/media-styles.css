@@ -1,0 +1,26 @@
+/* media queries */
+
+@media screen and (max-width: 1080px) {
+
+        .hamburger,
+    .toggle-menu {
+        display: block;
+    }
+
+    .footer-holder {
+        padding: 40px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-container .sec {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .footer-container .sec.aboutus {
+        width: 100%;
+    }
+}

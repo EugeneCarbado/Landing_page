@@ -1,117 +1,139 @@
+/* @import "media-styles.css"; */
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    left: 0;
-    right: 0;
-    box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
 
 /* nav styles */
-.main-header {
+.header-section {
     position: fixed;
+    width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    transition: 0.3s;
+    background: #FFF;
     padding: 30px 100px 0 100px;
-    z-index: 10000;
+    transition: 0.3s;
 }
 
-.nav-box {
+.logo a {
+    display: block;
+}
+
+.logo a img {
+    display: block;
+    width: 100px;
+}
+
+.navigation {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
 }
 
-.sticky .main-header {
+.sticky .header-section {
     padding-top: 5px;
     background: #FFF;
-    box-shadow: 0 0 5px 0 rgba(0,0,0, 0.1);
+    /* box-shadow: 0 0 5px 0 rgba(0,0,0, 0.1); */
+    box-shadow: -20px 0 40px rgba(0, 0, 0, 0.3);
 }
 
-.main-header .logo {
-    width: 100px;
-    position: relative;
-    color: #000;
-    font-family: 'Della Respira', serif;
-    text-decoration: none;
-}
-
-.main-header .nav-list {
-    position: relative;
+.menu {
     display: flex;
     justify-content: center;
+    flex-direction: row;
     align-items: center;
+    z-index: 1;
+    transition: 0.5s;
 }
 
-.main-header .nav-list li {
-    position: relative;
-    list-style: none;
-    
+.menu li {
+    list-style-type: none;
 }
 
-.main-header .nav-list li a {
-    position: relative;
+.menu li a {
+    color: #000;
     text-decoration: none;
-    color: #8A959E;
-    letter-spacing: 1px;
+    display: block;
+    padding: 40px 25px;
+    font-size: 18px;
+    line-height: 0.2em;
     transition: 0.3s;
-    margin-left: 3em;
 }
 
-.main-header .nav-list li a:hover {
-    color: #000;
-    padding-bottom: 4px;
-    border-bottom: 2px #000 solid;
+.menu li a:hover {
+    box-shadow: 0 -5px 0px #000 inset,
+    500px 0 0 rgba(255, 255, 255, 0.3) inset;
+    padding: 35px 25px 45px 25px;
 }
 
-/* sign in button styles */
-.sign-in-btn {
-    width: 100px;
-    height: 50px;
-    border: none;
-    border-radius: 15px;
-    margin-left: 2em;
-    font-size: 1em;
-    letter-spacing: 1px;
-    background-color: #E6E6E699;
-    color: #000;
+.hamburger {
+    position: relative;
+    width: 30px;
+    height: 4px;
+    background: #000;
     cursor: pointer;
+    z-index: 2;
     transition: 0.3s;
 }
 
-.sign-in-btn:focus { 
-    outline: none; 
+.hamburger:before,
+.hamburger:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    right: 0;
+    background: #000;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
-.sign-in-btn:hover {
-    background-color: #E0E1F0;
+.hamburger:before {
+    top: -10px;
+    width: 20px;
 }
 
-/* sign up button styles */
-.sign-up-btn {
-    width: 150px;
-    height: 50px;
-    margin-left: 1em;
-    border: none;
-    border-radius: 15px;
-    font-size: 1em;
-    letter-spacing: 1px;
-    background-color: #000;
-    color: #FFF;
+.hamburger:after {
+    top: 10px;
+    width: 25px;
+}
+
+.toggle-menu {
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    z-index: 3;
     cursor: pointer;
-    transition: 0.3s;
+    opacity: 0;
 }
 
-.sign-up-btn:focus { 
-    outline: none; 
+.hamburger,
+.toggle-menu {
+    display: none;
 }
 
-.sign-up-btn:hover {
-    background-color: #495057;
+.navigation input:checked ~ .hamburger {
+    background: transparent;
+}
+
+.navigation input:checked ~ .hamburger:before {
+    top: 0;
+    transform: rotate(-45deg);
+    width: 30px;
+}
+
+.navigation input:checked ~ .menu {
+    right: 0;
+    box-shadow: -20px 0 40px rgba(0, 0, 0, 0.3);
+}
+
+.navigation input:checked ~ .hamburger:after {
+    top: 0;
+    transform: rotate(45deg);
+    width: 30px;
 }
 
 /* home styles */
@@ -128,19 +150,21 @@
 }
 
 .main-heading { 
-    flex: 1;
     margin: 0 auto;
-    font-size: 3rem;
-    padding-top: 5rem;
+    font-size: 3em;
+    padding-top: 1em;
+    padding-right: 2em;
+    font-weight: 400;
 }
 
 .sub-heading { 
-    font-size: 1.5em;
+    font-size: 0.5em;
+    padding-top: 0.5em;
     color: #8A959E;
 }
 
-.main-img .home-img {
-    width: 55vh;
+.main-img {
+    width: 400px;
     margin: 0 auto;
 }
 
@@ -152,23 +176,21 @@
 .about-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 150px 100px 0 100px;
 }
 
 .about-img {
-    height: 55vh;
+    width: 400px;
 }
 
 .about-text {
     width: 60vh;
-    margin-right: 5em;
+    margin-left: 1em;
 }
 
 .about-text-header {
-    /* text-align: center; */
     font-size: 3.5em;
-    font-weight: 500;
 }
 
 .about-text-sub {
@@ -180,7 +202,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 50px 100px 0 100px;
+    padding: 100px 100px 0 100px;
 }
 
 .stat-number {
@@ -328,7 +350,16 @@
 }
 
 .help-container {
-    padding: 150px 100px 0 100px;
+    padding: 200px 100px 0 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.help-container .help-qestion {
+    font-size: 4em;
 }
 
 .faq-box {
@@ -369,8 +400,23 @@
     letter-spacing: 1px;
 }
 
+.faq-details[open] .faq-summary ~  * {
+    animation: sweep 0.5s ease-in-out;
+}
+
+@keyframes sweep {
+    from {
+        opacity: 0; margin-top: -50px;
+    }
+
+    to {
+        opacity: 1; margin-top: 0;
+    }
+}
+
 .faq-summary {
     transition: 0.2s;
+    cursor: pointer;
 }
 
 .faq-details .faq-summary {
@@ -530,5 +576,55 @@
     color: #495057;
 }
 
-/* media queries */
+@media screen and (max-width: 1080px) {
 
+    .hamburger,
+.toggle-menu {
+    display: block;
+}
+
+.header {
+    padding: 10px 20px;
+}
+
+.menu {
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    background: #FFF;
+    width: 300px;
+    height: 100%;
+    padding-top: 65px;
+}
+
+.menu li {
+    width: 100%;
+}
+
+.menu li a,
+.menu li a:hover {
+    padding: 30px;
+    font-size: 24px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+}
+
+.footer-holder {
+    padding: 40px;
+}
+
+.footer-container {
+    flex-direction: column;
+}
+
+.footer-container .sec {
+    margin-right: 0;
+    margin-bottom: 40px;
+}
+
+.footer-container .sec.aboutus {
+    width: 100%;
+}
+}
