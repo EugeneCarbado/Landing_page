@@ -208,13 +208,14 @@
     padding-top: 100px;
     margin: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
 }
 
 .about-img {
     width: 250px;
+    padding-top: 32px;
 }
 
 .about-text {
@@ -224,7 +225,6 @@
 }
 
 .about-text-header {
-    padding-top: 2em;
 }
 
 .about-text-sub {
@@ -232,9 +232,9 @@
 }
 
 .stats {
-    max-width: 1300px;
+    max-width: 1250px;
     margin: auto;
-    padding-top: 80px;
+    padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -550,8 +550,10 @@
     }
 
     .stats {
+        padding-top: 100px;
         justify-content: space-between;
         font-size: 1.2em;
+        bottom: 0;
     }
 
     /* footer media styles */
