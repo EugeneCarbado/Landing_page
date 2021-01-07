@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banking has never been easier.</title>
     <!-- style sheet -->
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles1.css">
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -14,36 +14,41 @@
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-
 </head>
 
 <body>
-    <!-- header section -->
-    <header class="header-section" id="nav">
-        <div class="logo">
-            <a href="#">
-                <img src="./images/logo.png" alt="">
-            </a>
-        </div>
-        <div class="navigation">
+    <!-- header/nav section -->
+    <header class="header-section1">
+        <div class="header-container">
+            <div class="nav-holder" id="nav">
+                <div class="logo">
+                    <a href="home">
+                        <img src="./images/logo.png" alt="kash-logo" id="#home">
+                    </a>
+                </div>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <nav class="navigation">
 
-            <input type="checkbox" class="toggle-menu">
-            <div class="hamburger"></div>
-
-            <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Abouts Us</a></li>
-                <li><a href="#">Plans</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
+                    <ul class="menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Abouts Us</a></li>
+                        <li><a href="#plans">Plans</a></li>
+                        <li><a href="#help">Help</a></li>
+                        <li><button class="sign-in-btn">Sign in</button></li>
+                        <li><button class="sign-up-btn">Get the App</button></li>
+                    </ul>
+                </nav>
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                </label>
+            </div>
         </div>
     </header>
-
-    <!-- end of header section -->
+    <!-- end of header/nav section -->
 
     <!-- home section -->
-    <section class="home-section" id="home">
-        <div class="container">
+    <section class="home-section1" id="home">
+        <div class="home-container">
             <div class="heading-landing-text">
                 <div class="main-heading">
                     <h1 class="heading-text">Make your money go further</h1>
@@ -55,197 +60,29 @@
             </div>
             <img src="../images/img2.png" alt="" class="main-img">
         </div>
-        </div>
-        <!--  -->
     </section>
-    <!-- end of home section -->
+    <!-- endhome section -->
 
     <!-- about section -->
-    <section class="about-section" id="about">
-        <div class="about-container">
-            <img src="../images/img3.jpg" alt="" class="about-img">
-            <div class="about-text">
-                <h2 class="about-text-header">
-                    Our app gives you more
-                </h2>
-                <br>
-                <p class="about-text-sub">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam nihil alias dolorum nam illum
-                    voluptatibus aliquid provident nulla, veritatis dignissimos?
-                </p>
-            </div>
-        </div>
-        <div class="stats">
-            <div class="personal-stat">
-                <p class="stat-number">8M+</p>
-                <p class="stat-text">Personal customers</p>
-            </div>
-            <div class="business-stat">
-                <p class="stat-number">200K</p>
-                <p class="stat-text">Business customers</p>
-            </div>
-            <div class="country-stat">
-                <p class="stat-number">35+</p>
-                <p class="stat-text">Countries supported</p>
-            </div>
-            <div class="app-stat">
-                <p class="stat-number">30+</p>
-                <p class="stat-text">In-app currencies</p>
-            </div>
-        </div>
+    <section class="about-section1" id="about">
     </section>
     <!-- end of about section -->
 
     <!-- plans section -->
-    <section class="plans-section">
-        <div class="pricing-plan-container">
-            <div class="pricing-plan" id="plans">
-                <div class="pricing-plan-header">
-                    <h1 class="pricing-plan-title">Standard</h1>
-                    <h2 class="pricing-plan-summary">For those getting started</h2>
-                </div>
-                <div class="pricing-plan-description">
-                    <ul class="pricing-plan-list">
-                        <li class="pricing-plan-feature">Lorem, ipsum dolor.</li>
-                        <li class="pricing-plan-feature">Lorem ipsum dolor sit.</li>
-                        <li class="pricing-plan-feature">Lorem ipsum dolor sit amet consectetur.</li>
-                    </ul>
-                </div>
-                <div class="pricing-plan-actions">
-                    <p class="pricing-plan-cost">£0</p>
-                    <p class="pricing-plan-text">per month</p>
-                    <a href="./" class="pricing-plan-button">Get Standard</a>
-                    <p class="pricing-plan-text">Account withdrawl limit £400 a Month</p>
-                </div>
-            </div>
-
-            <div class="pricing-plan pricing-plan--highlighted" id="plans">
-                <div class="pricing-plan-special_text">Most popular</div>
-                <div class="pricing-plan-header">
-                    <h1 class="pricing-plan-title">Premium</h1>
-                    <h2 class="pricing-plan-summary">Our Entry level account</h2>
-                </div>
-                <div class="pricing-plan-description">
-                    <ul class="pricing-plan-list">
-                        <li class="pricing-plan-feature">Lorem, ipsum dolor.</li>
-                        <li class="pricing-plan-feature">Lorem ipsum dolor sit.</li>
-                        <li class="pricing-plan-feature">Lorem ipsum dolor sit amet consectetur.</li>
-                    </ul>
-                </div>
-                <div class="pricing-plan-actions">
-                    <p class="pricing-plan-cost">£6.99</p>
-                    <p class="pricing-plan-text">per month</p>
-                    <a href="./" class="pricing-plan-button">Get Premium</a>
-                    <p class="pricing-plan-text">Account withdrawl limit £1000 a Month</p>
-                </div>
-            </div>
-
-            <div class="pricing-plan" id="plans">
-                <div class="pricing-plan-header">
-                    <h1 class="pricing-plan-title">Pro Account</h1>
-                    <h2 class="pricing-plan-summary">For the serious user</h2>
-                </div>
-                <div class="pricing-plan-description">
-                    <ul class="pricing-plan-list">
-                        <li class="pricing-plan-feature">Lorem, ipsum dolor.</li>
-                        <li class="pricing-plan-feature">Lorem ipsum dolor sit.</li>
-                        <li class="pricing-plan-feature">Lorem ipsum dolor sit amet consectetur.</li>
-                    </ul>
-                </div>
-                <div class="pricing-plan-actions">
-                    <p class="pricing-plan-cost">£12.99</p>
-                    <p class="pricing-plan-text">per month</p>
-                    <a href="./" class="pricing-plan-button">Get Pro Account</a>
-                    <p class="pricing-plan-text">Account withdrawl limit £1500 a Month</p>
-                </div>
-            </div>
-        </div>
+    <section class="plans-section1" id="plans">
     </section>
     <!-- end of plans section -->
 
     <!-- help section -->
     <section class="help-section" id="help">
-        <div class="help-container">
-            <h2 class="help-qestion">How can we help?</h2>
-            <div class="faq-box">
-                <p class="faq-heading">FAQs</p>
-                <div class="faqs">
-                    <details class="faq-details">
-                        <summary class="faq-summary">What is Lorem, ipsum.</summary>
-                        <p class="faq-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </details>
-                    <details class="faq-details">
-                        <summary class="faq-summary">What is Lorem, ipsum.</summary>
-                        <p class="faq-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </details>
-                    <details class="faq-details">
-                        <summary class="faq-summary">What is Lorem, ipsum.</summary>
-                        <p class="faq-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </details>
-                </div>
-            </div>
-        </div>
     </section>
     <!-- end of help section -->
 
     <!-- footer section -->
-    <footer class="footer-section">
-        <div class="footer-holder">
-            <div class="footer-container">
-                <div class="sec aboutus">
-                    <h2 class="aboutus-text">About Us</h2>
-                    <p class="aboutus-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, ea id quidem
-                        vitae
-                        at, quaerat vel provident quis iusto assumenda autem, excepturi sapiente adipisci reprehenderit
-                        eligendi sed quam minima nisi.</p>
-                    <ul class="social-media">
-                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                    </ul>
-                </div>
-                <div class="sec quick-links">
-                    <h2 class="aboutus-text">Quick Links</h2>
-                    <ul class="quick-links-list">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">Terms and Conditions</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="sec contact">
-                    <h2 class="aboutus-text">Contact Info</h2>
-                    <ul class="contact-info">
-                        <li>
-                            <span><i class="fas fa-map-marked-alt"></i></span>
-                            <span>243 Queensbridge street<br>
-                                London, EC2R 5LD<br>UK</span>
-                        </li>
-                        <li>
-                            <span><i class="fas fa-phone-square"></i></span>
-                            <p><a href="tel:+(44)2070340292">+(44)207 034 0292</a><br>
-                                <a href="tel:+(44)2070340292">+(44)207 034 0292</a>
-                            </p>
-                        </li>
-                        <li>
-                            <span><i class="fas fa-envelope-square"></i></span>
-                            <p><a href="emailto:help@kash.com">help@kash.com</a>
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <footer class="footer-section1">
     </footer>
-    <div class="copyright-text">
-        <p>Copyright © 2021 Eugene Carbado. All Rights Reserved.</p>
-    </div>
     <!-- end of footer section -->
-
-    <script src="/js/app.js"></script>
+    <!-- <script src="/js/app.js"></script> -->
 </body>
 
 </html>
