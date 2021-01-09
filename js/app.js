@@ -19,6 +19,7 @@ const isInView = el => {
 }
 
 /* This code block creates a nav list dynamically */
+
 const navList = document.querySelector('.nav-menu');
 const navMenu = ['Home',
     'About us',
