@@ -8,6 +8,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
     font-family: 'Inter', sans-serif;
 }
 
@@ -113,7 +116,7 @@
     transform: scale(1, 1);
 }
 
-.nav-toggle:checked ~ nav a {
+.current .nav-toggle:checked ~ nav a {
     opacity: 1;
     transition: opacity 250ms ease-in-out 250ms;
 }
@@ -122,6 +125,7 @@
 .sign-in-btn {
     width: 100px;
     height: 50px;
+    margin: 0 20px 0 20px;
     border: none;
     border-radius: 15px;
     font-size: 1em;
@@ -164,7 +168,7 @@
 }
 
 /* home styles */
-.home-section1 {
+.home-section {
     height: 100vh;
 }
 
@@ -200,7 +204,7 @@
 }
 
 /* about styles */
-.about-section1 {
+.about-section {
     height: 100vh;
 }
 
@@ -250,7 +254,7 @@
 }
 
 /* plans styles */
-.plans-section1 {
+.plans-section {
     height: 250vh;
 }
 
@@ -377,7 +381,7 @@
 }
 
 /* help section */
-.help-section1 {
+.help-section {
     height: 100vh;
 }
 
@@ -656,7 +660,7 @@
 /* large and above */
 @media screen and (min-width:1081px) {
     /* nav styles */
-       .nav-toggle-label {
+    .nav-toggle-label {
         display: none;
     }
 
@@ -768,11 +772,12 @@
     }
 
     /* plans media styles */
-    .plans-section1 {
+    .plans-section {
         height: 100vh;
     }
     
     .pricing-plan-container {
+        padding-top: 100px;
         flex-direction: row;
     }
 
@@ -782,7 +787,7 @@
 
     /* help media styles */
     .help-container {
-        padding-top: 200px;
+        padding-top: 100px;
     }
     
     .help-container .help-qestion {
