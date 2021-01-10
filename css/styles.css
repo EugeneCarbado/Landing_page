@@ -14,6 +14,11 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+  
+
 /* header styles */
 
 .sticky .nav-holder {
@@ -181,6 +186,7 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    overflow-y: scroll;
 }
 
 .heading-landing-text {
@@ -216,6 +222,7 @@ body {
     flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
+    overflow-y: scroll;
 }
 
 .about-img {
@@ -410,6 +417,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 0 5px rgba(0,0,0, 0.2);
     transition: 0.5s;
+    z-index: 1000;
 }
 
 .faq-box .faq-heading {

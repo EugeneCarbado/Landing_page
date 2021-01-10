@@ -1,4 +1,5 @@
 
+
 /* This function checks if an element is in the viewport */
 const isInView = el => {
 	const scroll = window.scrollY || window.pageYOffset
