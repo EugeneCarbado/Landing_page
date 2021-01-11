@@ -37,7 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // takes a list of all of the nav a tags with a class of .current
 let navLinks = document.querySelectorAll(".current");
 
-// this code observes the elements being scrolled then adds the active class to the nav a tags
+// this code observes the elements being scrolled
+// this is the code block that i'd like to link with the a nav tags so they add a class of ".active" to each tag when that section is in view
 function inView(elements) {
     // 4 sections observed
     elements.forEach(element => {
