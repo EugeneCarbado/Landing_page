@@ -5,6 +5,7 @@ const navMenu = ['Home',
     'Plans',
     'Help'];
 
+// code fragment to help with performance of website
 const fragment = new DocumentFragment();
 
 navMenu.forEach(function (navItem) {
@@ -20,34 +21,36 @@ navMenu.forEach(function (navItem) {
 
 navList.appendChild(fragment);
 
-// this piece of code gives the ability to observe any scrolling activity between the sections
-document.addEventListener('DOMContentLoaded', () => {
-    let options = {
-        root: null,
-        rootMargin: "-250px 0px",
-        threshold: 0.05
-    };
-    let observer = new IntersectionObserver(inView, options);
-    document.querySelectorAll('section').forEach(section => {
-        observer.observe(section);
-    })
+// get all sections that have an ID defined
+const sections = document.querySelectorAll("section[id]");
+
+// add an event listener listening for scroll
+window.addEventListener("scroll", navHighlighted);
+
+function navHighlighted() {
+  
+  // get current scroll position
+  let scrollY = window.pageYOffset;
+  
+  // loop through sections to get height, top and ID values for each
+  sections.forEach(current => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    sectionId = current.getAttribute("id");
     
-});
-
-// takes a list of all of the nav a tags with a class of .current
-let navLinks = document.querySelectorAll(".current");
-
-// this code observes the elements being scrolled
-// this is the code block that i'd like to link with the a nav tags so they add a class of ".active" to each tag when that section is in view
-function inView(elements) {
-    // 4 sections observed
-    elements.forEach(element => {
-        if (element.isIntersecting) {
-            element.target.classList.add('active');
-        } else {
-            element.target.classList.remove('active');
-        }
-    });
+    /*
+    - if the current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+    - to know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+    */
+    if (
+      scrollY > sectionTop &&
+      scrollY <= sectionTop + sectionHeight
+    ){
+      document.querySelector(".navigation a[href*=" + sectionId + "]").classList.add("active");
+    } else {
+      document.querySelector(".navigation a[href*=" + sectionId + "]").classList.remove("active");
+    }
+  });
 }
 
 /* This code takes the #nav id and applies a css rule that makes the nav sticky when scrolling */
