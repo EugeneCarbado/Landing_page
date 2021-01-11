@@ -1,5 +1,4 @@
-/* This code block creates a nav list dynamically */
-
+// This code block creates a nav list dynamically
 const navList = document.querySelector('.nav-menu');
 const navMenu = ['Home',
     'About',
@@ -14,7 +13,6 @@ navMenu.forEach(function (navItem) {
     navA.setAttribute('class', 'current');
     //navA.setAttribute('class', 'active');
     navA.setAttribute('href', `#${navItem}`);
-    navA.setAttribute('id', `${navItem}`);
     const navLink = document.createElement('li');
     navLink.appendChild(navA);
     fragment.appendChild(navLink);
@@ -22,44 +20,7 @@ navMenu.forEach(function (navItem) {
 
 navList.appendChild(fragment);
 
-
-// adding the active class
-/* function clickInView () {
-    document.addEventListener('click', function (event) {
-        if(!event.target.classList.contains('current')) return;
-    
-        event.target.classList.add('active');
-    
-        const links = document.querySelectorAll('.current');
-    
-        for (let i = 0; i < links.length; i++) {
-            if(links[i] === event.target) continue;
-    
-            links[i].classList.remove('active');
-        }
-    }, false);
-} */
-
-/* let mainNavLinks = document.querySelectorAll(".current");
-
-window.addEventListener("scroll", event => {
-  let fromTop = window.scrollY;
-
-  mainNavLinks.forEach(link => {
-    let section = document.querySelector(link.hash);
-
-    if (
-      section.offsetTop <= fromTop &&
-      section.offsetTop + section.offsetHeight > fromTop
-    ) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
-    }
-  });
-}); */
-
-
+// this piece of code gives the ability to observe any scrolling activity between the sections
 document.addEventListener('DOMContentLoaded', () => {
     let options = {
         root: null,
@@ -73,8 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
 });
 
+// takes a list of all of the nav a tags with a class of .current
 let navLinks = document.querySelectorAll(".current");
 
+// this code observes the elements being scrolled then adds the active class to the nav a tags
 function inView(elements) {
     // 4 sections observed
     elements.forEach(element => {
@@ -85,10 +48,6 @@ function inView(elements) {
         }
     });
 }
-
-
-
-//actual function is implemeted here
 
 /* This code takes the #nav id and applies a css rule that makes the nav sticky when scrolling */
 document.addEventListener('scroll', function () {
